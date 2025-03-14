@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lora', serif !important;
+    background: url('/images/back.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fffcdc;
+    opacity: 0.8; /* Ajuste l'opacité selon ton besoin */
+    z-index: -1;
+}
+
+
+/* body {
+    background-color: #fffcdc !important;
+} */
+
+/* .list-group{
+    background-color: #a48a7080 !important;
+} */
+
+.list-group-item{
+    color: #14281d !important;
+}
+
+.main {
+    margin-top: 106px;
+    color: #14281d;
+}
+
+.titre-page{
+    color: #14281d !important;
+}
+
+.carte-1{
+    background-color: #a48a70 !important;
+    color: #14281d !important;
+}
+
+.bouton-principal{
+    color: #fffcdc !important;
+    background-color: #14281d !important;
+    border: none !important;
+}
+
+.vert{
+    color: #14281d !important;
+}
+
+.navbar{
+    background-color: #fffcdc;
+}
+
+.bouton-lien{
+    background-color: transparent;
+    border: none;
+    color: #14281d;
+    text-decoration: #14281d;
+}
+
+.caroussel-accueil {
+    max-height: 39vw;
+    /* Limite la hauteur de la section */
+    overflow: hidden;
+    /* Empêche le débordement */
+}
+
+.carousel-inner {
+    height: 100%;
+    /* Assure que l'intérieur du carousel prend toute la hauteur de la section */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Maintient l'aspect de l'image sans la déformer */
+}
+
+.table th {
+    background-color: #a48a70 !important;
+    color: #ffffff;
+}
+
+.table tbody tr:nth-child(odd) td {
+    background-color: #a48a7080;
+}
+
+.table td, 
+.table th {
+    color: #14281d;
+}
+
+.total-row td {
+    font-weight: bold;
+    background-color: #a48a70 !important;
+    color: #ffffff;
+}
+
+
+.lien-sans-effet {
+    text-decoration: none;
+    color: black;
+}
+
+.localisation-carte {
+    padding: 50px 0;
+    /* Ajoute un peu de padding pour séparer le contenu */
+}
+
+.localisation-carte h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.localisation-carte p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.localisation-carte .img-fluid {
+    width: 100%;
+    height: auto;
+    /* Assure que l'image conserve ses proportions */
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.p-t-3{
+    padding-top: 3vw;
+}
+
+.p-b-3{
+    padding-bottom: 3vw;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+.total-row {
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
