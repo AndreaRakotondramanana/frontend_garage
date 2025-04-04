@@ -1,0 +1,23 @@
+.pied-page{
+    background-color: #a48a70 !important;
+    color: #14281d !important;
+}
+
+footer{
+    padding: 4vw;
+    background-color: #a48a70 !important;
+}
+footer .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px; /* Ajuste la hauteur minimale selon ton besoin */
+}
+
+footer .col-3,
+footer .col-9 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

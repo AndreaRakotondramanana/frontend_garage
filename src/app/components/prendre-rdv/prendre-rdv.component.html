@@ -1,0 +1,112 @@
+<main class="main">
+    <section class="prendre-rdv p-t-3 p-b-3">
+        <div class="container mt-5">
+            <!-- Titre -->
+            <h2 class="text-center mb-4">Prendre un Rendez-vous</h2>
+    
+            <div class="card p-4">
+                <form>
+                    
+                    <!-- Date et heure -->
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Choisissez l'heure qui vous convient pour le rendez-vous</label>
+                        <input type="datetime-local" id="date" class="form-control">
+                    </div>
+
+                    <!-- Choisir une voiture -->
+                    <div class="mb-3">
+                        <label for="voiture" class="form-label">
+                            Choisissez une voiture
+                            (Pour ajouter une nouvelle voiture ciquer 
+                            <button type="button" class="bouton-lien" data-bs-toggle="modal" data-bs-target="#ajoutVoitureModal">
+                                ici
+                            </button>
+                            )
+                        </label>
+                        <div class="d-flex">
+                            <select id="voiture" class="form-select me-2">
+                                <option value="">Sélectionnez votre voiture</option>
+                                <option value="1">Toyota Corolla - ABC123</option>
+                                <option value="2">Peugeot 208 - XYZ789</option>
+                            </select>
+                            <!-- Bouton pour ouvrir la modal -->
+                        </div>
+                    </div>
+
+                    <!-- Garage -->
+                    <div class="mb-3">
+                        <label for="garage" class="form-label">
+                            Choisissez un garage
+                            (Pour voir le garage le plus proche de chez vous cliquer <a class="lien-sans-effet" href="/">ici</a>)
+                        </label>
+                        <select id="garage" class="form-select">
+                            <option value="">Sélectionnez un garage</option>
+                            <option value="garage1">Garage Auto Express</option>
+                            <option value="garage2">Garage Speedy</option>
+                        </select>
+                    </div>
+    
+                    <!-- Notes -->
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Joinniez une note pour permettre au garagiste d'orrienter son diagnostique</label>
+                        <textarea id="notes" class="form-control" rows="3" placeholder="Ajoutez des précisions"></textarea>
+                    </div>
+        
+                    <!-- Bouton Soumettre -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success w-100 bouton-principal">Envoyer la demande</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Modal Ajout Voiture -->
+        <div class="modal fade" id="ajoutVoitureModal" tabindex="-1" aria-labelledby="ajoutVoitureModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ajoutVoitureModalLabel">Ajouter une nouvelle voiture</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="marque" class="form-label">Marque</label>
+                                <input type="text" id="marque" class="form-control" placeholder="Ex: Toyota">
+                            </div>
+                            <div class="mb-3">
+                                <label for="modele" class="form-label">Modèle</label>
+                                <input type="text" id="modele" class="form-control" placeholder="Ex: Corolla">
+                            </div>
+                            <div class="mb-3">
+                                <label for="immatriculation" class="form-label">Immatriculation</label>
+                                <input type="text" id="immatriculation" class="form-control" placeholder="Ex: ABC123">
+                            </div>
+                            <div class="mb-3">
+                                <label for="immatriculation" class="form-label">Année</label>
+                                <input type="text" id="immatriculation" class="form-control" placeholder="Ex: 2008">
+                            </div>
+                            <div class="mb-3">
+                                <label for="immatriculation" class="form-label">Type</label>
+                                <select class="form-select" name="" id="">
+                                    <option value="">Electrique</option>
+                                    <option value="">Diesel</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="immatriculation" class="form-label">Taille</label>
+                                <select class="form-select" name="" id="">
+                                    <option value="">Voiture legere</option>
+                                    <option value="">4*4</option>
+                                </select>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-success w-100 bouton-principal">Ajouter</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

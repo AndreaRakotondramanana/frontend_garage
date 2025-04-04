@@ -1,3 +1,13 @@
 .navbar-light .navbar-nav .nav-link {
-    color: #000;
-  }
+  color: #000;
+}
+
+.navbar {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Ombre plus marquée au défilement */
+.navbar.scrolled {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}

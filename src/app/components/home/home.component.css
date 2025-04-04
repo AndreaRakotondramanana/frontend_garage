@@ -1,0 +1,33 @@
+
+/* Effet d'ombre et de zoom sur les cartes */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animation douce pour l'effet hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ombre légère */
+    border: none;
+    /* Enlève la bordure si nécessaire */
+    overflow: hidden;
+    /* Assure que le contenu ne déborde pas de la carte */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Zoom léger lors du survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Ombre plus forte lors du survol */
+}
+
+/* Effet d'ombre et de zoom sur les images des cartes */
+.card-img-top {
+    transition: transform 0.3s ease;
+    /* Animation douce pour l'effet hover de l'image */
+    width: 100%;
+    /* Assure que l'image prend toute la largeur de la carte */
+    height: auto;
+    /* Garde les proportions de l'image */
+}
+
+.localisation-carte{
+    background-color: #fffcdc !important;
+}
