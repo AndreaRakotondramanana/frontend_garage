@@ -11,7 +11,7 @@ export const routes: Routes = [
     { path: '', component: HomeComponent},
     { path: 'login', component: LoginComponent},
     { path: 'register', component: RegisterComponent},
-    { path: 'detail-categorie', component: DetailCategorieComponent},
+    { path: 'detail-categorie/:id', component: DetailCategorieComponent },
     { path: 'detail-historique-rep', component: DetailHistoriqueRepComponent},
     { path: 'detail-suivi-rep', component: DetailSuiviRepComponent},
     { path: 'prendre-rdv', component: PrendreRdvComponent},
