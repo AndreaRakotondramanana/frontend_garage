@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,13 +12,31 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule, FormsModule],
 })
 export class RegisterComponent {
-  user = { username: '', email: '', password: '' };
+  user = {
+    username: '',
+    email: '',
+    password: '',
+    pseudo: '',       
+    nom: '',          
+    prenom: '',       
+    dtn: ''           
+  };
 
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   onSubmit() {
-    this.authService.register(this.user).subscribe((res) => {
-      alert('Inscription réussie !');
+    // Envoi des données au backend
+    this.authService.register(this.user).subscribe({
+      next: (res) => {
+        alert('Inscription réussie !');
+        this.router.navigate(['/login']); 
+      },
+      error: (err) => {
+        alert('Erreur : ' + err.error.message);
+      }
     });
   }
 }

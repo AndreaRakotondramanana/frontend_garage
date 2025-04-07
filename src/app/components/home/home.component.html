@@ -37,87 +37,14 @@
     <section class="categories">
         <div class="container my-5">
             <div class="row">
-                <!-- Carte 1 -->
-                <div class="col-md-4 mb-4">
-                    <a class="lien-sans-effet" href="/detail-categorie">
+                <div class="col-md-4 mb-4" *ngFor="let cat of categories">
+                    <a class="lien-sans-effet" [routerLink]="['/detail-categorie', cat._id]">
                         <div class="card carte-1">
-                            <img src="https://picsum.photos/300/200" class="card-img-top" alt="Card image 1">
+                            <img src="https://picsum.photos/300/200" class="card-img-top"
+                                alt="{{cat.libelle_categorie}}">
                             <div class="card-body">
-                                <h5 class="card-title">Titre de la carte 1</h5>
-                                <p class="card-text">Quelques informations intéressantes dans cette carte.</p>
-                                <!-- <a href="#" class="btn btn-primary">Voir plus</a> -->
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Carte 2 -->
-                <div class="col-md-4 mb-4">
-                    <a class="lien-sans-effet" href="">
-                        <div class="card carte-1">
-                            <img src="https://picsum.photos/300/200" class="card-img-top" alt="Card image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Titre de la carte 1</h5>
-                                <p class="card-text">Quelques informations intéressantes dans cette carte.</p>
-                                <!-- <a href="#" class="btn btn-primary">Voir plus</a> -->
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Carte 3 -->
-                <div class="col-md-4 mb-4">
-                    <a class="lien-sans-effet" href="">
-                        <div class="card carte-1">
-                            <img src="https://picsum.photos/300/200" class="card-img-top" alt="Card image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Titre de la carte 1</h5>
-                                <p class="card-text">Quelques informations intéressantes dans cette carte.</p>
-                                <!-- <a href="#" class="btn btn-primary">Voir plus</a> -->
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Carte 4 -->
-                <div class="col-md-4 mb-4">
-                    <a class="lien-sans-effet" href="">
-                        <div class="card carte-1">
-                            <img src="https://picsum.photos/300/200" class="card-img-top" alt="Card image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Titre de la carte 1</h5>
-                                <p class="card-text">Quelques informations intéressantes dans cette carte.</p>
-                                <!-- <a href="#" class="btn btn-primary">Voir plus</a> -->
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Carte 5 -->
-                <div class="col-md-4 mb-4">
-                    <a class="lien-sans-effet" href="">
-                        <div class="card carte-1">
-                            <img src="https://picsum.photos/300/200" class="card-img-top" alt="Card image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Titre de la carte 1</h5>
-                                <p class="card-text">Quelques informations intéressantes dans cette carte.</p>
-                                <!-- <a href="#" class="btn btn-primary">Voir plus</a> -->
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Carte 6 -->
-                <div class="col-md-4 mb-4">
-                    <a class="lien-sans-effet" href="">
-                        <div class="card carte-1">
-                            <img src="https://picsum.photos/300/200" class="card-img-top" alt="Card image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Titre de la carte 1</h5>
-                                <p class="card-text">Quelques informations intéressantes dans cette carte.</p>
-                                <!-- <a href="#" class="btn btn-primary">Voir plus</a> -->
+                                <h5 class="card-title">{{cat.libelle_categorie}}</h5>
+                                <p class="card-text">{{cat.description}}</p>
                             </div>
                         </div>
                     </a>
@@ -137,17 +64,15 @@
                         felis et, porttitor velit. Donec fringilla magna non risus ullamcorper, at tristique ligula
                         varius.
                     </p>
-                        <a class="btn btn-dark btn-rounded bouton-principal" href="#">Me localiser<i class="bi bi-pin-map-fill"></i></a>
+                    <a class="btn btn-dark btn-rounded bouton-principal" href="#">Me localiser<i
+                            class="bi bi-pin-map-fill"></i></a>
                     <br><br>
                 </div>
-                
+
                 <!-- Partie droite : image -->
                 <!-- Partie droite : Carte Leaflet -->
-                <div class="col-md-6"  style="height: 400px;">
-                    <!-- Carte Leaflet ici -->
-                     <!-- <div id="map"></div> -->
-
-                     <div id="map" style="height: 400px;"></div>
+                <div class="col-md-6" style="height: 400px;">
+                    <div id="map" style="height: 400px;"></div>
                 </div>
             </div>
         </div>
